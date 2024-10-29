@@ -9,8 +9,8 @@ type Initializer interface {
 
 var initializers []Initializer
 
-func Register(initializer Initializer) {
-	initializers = append(initializers, initializer)
+func Register(initializer ...Initializer) {
+	initializers = append(initializers, initializer...)
 }
 
 func Initialize() error {
